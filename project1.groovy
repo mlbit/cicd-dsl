@@ -1,3 +1,9 @@
+def foldername = "playground"
+folder(foldername) {
+    displayName("displayname")
+    description("This is Description")
+}
+
 job('DSL-Tutorial-1-Test') {
     scm {
         git('git://github.com/mlbit/cicd-dsl-test.git')
@@ -23,9 +29,4 @@ branches.each {
             maven("test -Dproject.name=${project}/${branchName}")
         }
     }
-}
-def foldername = "playground"
-folder(foldername) {
-    displayName("displayname")
-    description("This is Description")
 }
