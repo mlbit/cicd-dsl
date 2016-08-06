@@ -24,3 +24,8 @@ branches.each {
         }
     }
 }
+def foldername = "playground"
+folder(foldername) {
+    displayName("displayname")
+    description("Description")
+}
